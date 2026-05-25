@@ -24,10 +24,10 @@ const Footer = () => {
         </div>
 
         {/* Professional Policy */}
-        <div className="bg-background/10 backdrop-blur-sm rounded-xl p-6 mb-16 max-w-3xl mx-auto">
+        <div className="bg-background/10 backdrop-blur-sm rounded-xl p-6 mb-16 max-w-3xl mx-auto border border-primary/50">
           <div className="flex items-start gap-4">
-            <div className="w-10 h-10 rounded-lg bg-background/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <ShieldCheck size={20} className="text-background/80" />
+            <div className="w-10 h-10 rounded-lg gradient-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+              <ShieldCheck size={20} className="text-primary-foreground" />
             </div>
             <div>
               <h3 className="text-sm font-semibold mb-1">Política Profissional</h3>
