@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { WHATSAPP_URL } from "../lib/utils";
 
 const navLinks = [
   { label: "Sobre", href: "#about" },
@@ -41,7 +42,9 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="#contact"
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="gradient-primary text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity"
           >
             Agendar atendimento
@@ -59,27 +62,33 @@ const Navbar = () => {
       </div>
 
       {/* Mobile menu */}
-      {mobileOpen && (
-        <div className="md:hidden bg-background/98 backdrop-blur-md border-t border-border px-6 py-4 space-y-3">
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+          mobileOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="bg-background/98 backdrop-blur-md border-t border-border px-6 py-5 space-y-1">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="block text-sm font-medium text-muted-foreground hover:text-foreground"
+              className="block text-sm font-medium text-muted-foreground hover:text-foreground py-2.5 border-b border-border/40 last:border-0 transition-colors"
               onClick={() => setMobileOpen(false)}
             >
               {link.label}
             </a>
           ))}
-          <a
-            href="#contact"
-            className="block gradient-primary text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-medium text-center"
-            onClick={() => setMobileOpen(false)}
-          >
-            Agendar atendimento
-          </a>
+          <div className="pt-3">
+            <a
+              href="#contact"
+              className="block gradient-primary text-primary-foreground px-5 py-3 rounded-lg text-sm font-semibold text-center hover:opacity-90 transition-opacity"
+              onClick={() => setMobileOpen(false)}
+            >
+              Agendar atendimento
+            </a>
+          </div>
         </div>
-      )}
+      </div>
     </nav>
   );
 };

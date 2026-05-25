@@ -1,4 +1,5 @@
 import { ShieldCheck, MapPin, Phone, Mail } from "lucide-react";
+import { WHATSAPP_URL } from "../lib/utils";
 
 const Footer = () => {
   return (
@@ -13,7 +14,9 @@ const Footer = () => {
             Agende uma consula e dê o primeiro passo para uma vida sem dores.
           </p>
           <a
-            href="tel:+15551234567"
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block gradient-primary text-primary-foreground px-8 py-4 rounded-lg text-base font-semibold hover:opacity-90 transition-opacity shadow-soft"
           >
             Agendar um atendimento
@@ -53,13 +56,18 @@ const Footer = () => {
           <div>
             <h4 className="text-sm font-semibold mb-4">Links Rápidos</h4>
             <div className="space-y-2">
-              {["About", "Services", "Benefits", "Testimonials"].map((link) => (
+              {[
+                { label: "Sobre", href: "#about" },
+                { label: "Serviços", href: "#services" },
+                { label: "Benefícios", href: "#benefits" },
+                { label: "Depoimentos", href: "#testimonials" },
+              ].map(({ label, href }) => (
                 <a
-                  key={link}
-                  href={`#${link.toLowerCase()}`}
+                  key={href}
+                  href={href}
                   className="block text-sm text-background/50 hover:text-background transition-colors"
                 >
-                  {link}
+                  {label}
                 </a>
               ))}
             </div>
@@ -69,9 +77,9 @@ const Footer = () => {
             <h4 className="text-sm font-semibold mb-4">Contato</h4>
             <div className="space-y-3">
               {[
-                { icon: MapPin, text: "123 Wellness Ave, Suite 200" },
-                { icon: Phone, text: "(555) 123-4567" },
-                { icon: Mail, text: "info@massotherapy.com" },
+                { icon: MapPin, text: "Rua 14 de julho, 40 - Porto Alegre, RS" },
+                { icon: Phone, text: "(51) 99867-3066" },
+                { icon: Mail, text: "srmassoterapeuta@gmail.com" },
               ].map(({ icon: Icon, text }) => (
                 <div key={text} className="flex items-center gap-2">
                   <Icon size={14} className="text-background/40" />

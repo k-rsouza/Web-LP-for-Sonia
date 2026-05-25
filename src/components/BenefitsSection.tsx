@@ -29,9 +29,9 @@ const benefits = [
 
 const BenefitsSection = () => {
   return (
-    <section id="benefits" className="py-24 bg-background">
+    <section id="benefits" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
           <div>
             <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">
               Por que massoterapia?

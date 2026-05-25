@@ -2,9 +2,9 @@ import { Shield, Heart, Award } from "lucide-react";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-24 bg-background">
+    <section id="about" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
           <div>
             <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">
               Sobre a Terapeuta
@@ -41,17 +41,17 @@ const AboutSection = () => {
             </div>
           </div>
 
-          <div className="relative">
+          <div className="relative mx-auto max-w-sm md:max-w-none">
             <div className="bg-wellness-lavender rounded-2xl aspect-[4/5] flex items-center justify-center overflow-hidden">
               <div className="text-center p-8">
-                <div className="w-32 h-32 rounded-full gradient-primary mx-auto mb-6 flex items-center justify-center">
-                  <span className="text-primary-foreground text-4xl font-heading">MT</span>
+                <div className="w-24 h-24 md:w-32 md:h-32 rounded-full gradient-primary mx-auto mb-5 md:mb-6 flex items-center justify-center">
+                  <span className="text-primary-foreground text-3xl md:text-4xl font-heading">MT</span>
                 </div>
-                <h3 className="text-xl font-heading text-foreground mb-2">Profissional Massoterapeuta</h3>
+                <h3 className="text-lg md:text-xl font-heading text-foreground mb-2">Profissional Massoterapeuta</h3>
                 <p className="text-sm text-muted-foreground">BSc Kinesiology · RMT · CSMT</p>
               </div>
             </div>
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-wellness-pink rounded-2xl -z-10" />
+            <div className="absolute -bottom-3 -right-3 md:-bottom-4 md:-right-4 w-20 h-20 md:w-24 md:h-24 bg-wellness-pink rounded-2xl -z-10" />
           </div>
         </div>
       </div>

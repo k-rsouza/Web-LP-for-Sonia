@@ -1,4 +1,5 @@
 import { Activity, Dumbbell, Flower2, Cross } from "lucide-react";
+import { WHATSAPP_URL } from "../lib/utils";
 
 const services = [
   {
@@ -33,9 +34,9 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-24 bg-wellness-lavender">
+    <section id="services" className="py-16 md:py-24 bg-wellness-lavender">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">
             Nossos serviços
           </p>
@@ -71,7 +72,9 @@ const ServicesSection = () => {
                   {service.duration}
                 </span>
                 <a
-                  href="#contact"
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-xs font-semibold text-primary hover:underline"
                 >
                   Agendar agora →
