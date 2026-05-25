@@ -30,7 +30,7 @@ const Footer = () => {
               <ShieldCheck size={20} className="text-primary-foreground" />
             </div>
             <div>
-              <h3 className="text-sm font-semibold mb-1">Política Profissional</h3>
+              <h3 className="text-sm font mb-1">Política Profissional</h3>
               <p className="text-xs text-background/60 leading-relaxed">
                 Todos os serviços prestados são estritamente terapêuticos e profissionais. Nossa prática segue os mais altos padrões éticos da
                 profissão e da massoterapia. Estamos empenhados em fornecer um ambiente seguro,
@@ -54,7 +54,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold mb-4">Links Rápidos</h4>
+            <h4 className="text-sm font mb-4">Links Rápidos</h4>
             <div className="space-y-2">
               {[
                 { label: "Sobre", href: "#about" },
@@ -74,7 +74,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold mb-4">Contato</h4>
+            <h4 className="text-sm font mb-4">Contato</h4>
             <div className="space-y-3">
               {[
                 { icon: MapPin, text: "Rua 14 de julho, 40 - Porto Alegre, RS" },

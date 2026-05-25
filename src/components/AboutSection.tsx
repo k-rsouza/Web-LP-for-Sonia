@@ -28,7 +28,7 @@ const AboutSection = () => {
             <div className="space-y-4">
               {[
                 { icon: Shield, text: "Profissional licenciada e certificada" },
-                { icon: Heart, text: "Atendimento voltado ao paciente" },
+                { icon: Heart, text: "Foco na promoção da saúde, bem-estar e qualidade de vida do paciente" },
                 { icon: Award, text: "Certificado técnico em massoterapia" },
               ].map(({ icon: Icon, text }) => (
                 <div key={text} className="flex items-center gap-3">
